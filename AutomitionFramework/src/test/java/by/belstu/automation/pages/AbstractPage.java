@@ -6,9 +6,10 @@ public abstract class AbstractPage {
 
 	protected WebDriver driver;
 
-	public abstract void openPage();
-
-	public AbstractPage(WebDriver driver) {
+	protected AbstractPage(WebDriver driver) {
 		this.driver = driver;
 	}
+	
+	protected abstract void openPage();
+	
 }
