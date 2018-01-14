@@ -28,7 +28,15 @@ public class HotelsPage extends AbstractPage{
 		destinationTo = driver.findElement(By.xpath("/html/body/div[4]/div[1]/section/div[3]/form/div[3]"));
 		destinationTo.click();
 		destinationTo.sendKeys(to);
-		
+		WebElement tickButton = driver.findElement(By.xpath("/html/body/div[4]/div[1]/section/div[3]/form/div[4]/label/a/input"));
+		tickButton.click();
+		hotelsSearchButton = driver.findElement(By.xpath("/html/body/div[4]/div[1]/section/div[3]/form/div[6]/a/span/span"));
+		hotelsSearchButton.click();
+	}
+	
+	public boolean checkCurrentHotel(String city) {
+		WebElement nameCity = driver.findElement(By.xpath("/html/body/div[5]/div[3]/div/div[5]/div[2]/div[1]/h1"));
+		return city.equals(nameCity.getText()) ? false : true;
 	}
 
 }

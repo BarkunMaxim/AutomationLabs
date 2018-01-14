@@ -129,8 +129,10 @@ public class MainPage extends AbstractPage {
 	}*/
 
 	public void changeLanguage() {
-		changeLanguage = driver.findElement(By.id("HYot-CountryPicker-dropdown"));
-
+		changeLanguage = driver.findElement(By.xpath("//*[@class=\"Common-Widgets-Dropdown-DropdownDialog CountryPicker-dropdown DropDown size-m\"]"));
+		changeLanguage.click();
+		WebElement chooseLanguage = driver.findElement(By.xpath("/html/body/div[2]/div/div/div/div[1]/div/a[2]"));
+		chooseLanguage.click();
 	}
 
 	public boolean isWork() {

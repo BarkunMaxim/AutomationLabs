@@ -11,5 +11,6 @@ public abstract class AbstractPage {
 	}
 	
 	protected abstract void openPage();
+
 	
 }
